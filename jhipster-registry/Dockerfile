@@ -21,7 +21,7 @@ EXPOSE 8761
 VOLUME /tmp
 
 ENV SPRING_PROFILES_ACTIVE=prod,native
-ENV GIT_URI=https://github.com/jhipster/jhipster-registry/
-ENV GIT_SEARCH_PATHS=central-config
+ENV GIT_URI=https://github.com/leegive/JHipster.git
+ENV GIT_SEARCH_PATHS=jhipster-registry/central-config
 
 CMD ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/jhipster-registry.war","--spring.cloud.config.server.git.uri=${GIT_URI}","--spring.cloud.config.server.git.search-paths=${GIT_SEARCH_PATHS}"]
