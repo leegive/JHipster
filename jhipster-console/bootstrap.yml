@@ -1,0 +1,18 @@
+version: '2'
+services:
+    jhipster-elasticsearch:
+        image: jhipster/jhipster-elasticsearch
+        ports:
+            - 9200:9200
+            - 9300:9300
+
+    jhipster-logstash:
+        image: jhipster/jhipster-logstash
+        command: logstash -f /conf/logstash.conf
+        ports:
+            - 5000:5000/udp
+     
+    jhipster-console:
+        image: jhipster/jhipster-console
+        ports:
+            - 5601:5601
