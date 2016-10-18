@@ -22,6 +22,8 @@ VOLUME /tmp
 
 ENV SPRING_PROFILES_ACTIVE=prod,native
 ENV GIT_URI=https://github.com/leegive/JHipster.git
-ENV GIT_SEARCH_PATHS=jhipster-registry/central-config
+ENV GIT_SEARCH_PATHS=config
+ENV GIT_USERNAME=leegive
+ENV GIT_PASSWORD=Wj173749
 
-CMD ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/jhipster-registry.war","--spring.cloud.config.server.git.uri=${GIT_URI}","--spring.cloud.config.server.git.search-paths=${GIT_SEARCH_PATHS}"]
+CMD ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/jhipster-registry.war","--spring.cloud.config.server.git.uri=${GIT_URI}","--spring.cloud.config.server.git.search-paths=${GIT_SEARCH_PATHS}","--spring.cloud.config.server.git.username=${GIT_USERNAME}","--spring.cloud.config.server.git.password=${GIT_PASSWORD}"]
