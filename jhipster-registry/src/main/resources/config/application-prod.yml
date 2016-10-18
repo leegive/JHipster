@@ -72,8 +72,6 @@ spring:
                     # sample prod config using the central-directory folder in the jhipster-registry github repos
                     uri: ${GIT_URI}
                     search-paths: ${GIT_SEARCH_PATHS}
-                    username: ${GIT_USERNAME}
-                    password: ${GIT_PASSWORD}
                 prefix: /config
 
     thymeleaf:
