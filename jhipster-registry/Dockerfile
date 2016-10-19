@@ -18,6 +18,7 @@ RUN cd /code/ && \
 
 RUN sh -c 'touch /jhipster-registry.war'
 EXPOSE 8761
+EXPOSE 8888
 VOLUME /tmp
 
 ENV SPRING_PROFILES_ACTIVE=prod
